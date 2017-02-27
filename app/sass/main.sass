@@ -203,7 +203,7 @@ section
 		display: block
 		text-transform: uppercase
 		position: relative
-		margin-bottom: 105px
+		margin-bottom: 55px
 		text-align: center
 		&::before
 			content: ''
@@ -222,7 +222,7 @@ section
 
 .research-post
 	max-width: 390px
-	margin: 0 auto
+	margin: 50px auto 0
 	.post-text
 		font-size: 18px
 		line-height: 1.4
@@ -368,6 +368,79 @@ section
 			&:hover
 				color: #969696
 				border-color: #969696
+
+.toggle-menu
+	background: transparent
+	border: none
+	display: none
+	width: 50px
+	height: 50px
+	margin: 0 0 0 20%
+	position: relative
+	z-index: 100
+
+.sandwich
+	width: 28px
+	height: 28px
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+
+.s-topper, .s-bottom, .s-middle
+	display: block
+	position: relative
+	width: 28px
+	height: 3px
+	background: white
+	border: none
+	border-radius: 4px 4px 4px 4px
+
+.s-topper
+	top: 0px
+	transition: transform 0.5s, top 0.2s
+
+.s-middle
+	top: 6.6px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.s-bottom
+	top: 13.5px
+	transition: all 0.5s
+	transition-delay: 0.1s
+
+.sandwich.active 
+	.s-topper 
+		top: 9px
+		transform: rotate(-45deg)
+	.s-middle
+		top: 6px
+		transform: rotate(45deg)
+	.s-bottom 
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.single-post
+	background-color: #FFF
+	padding: 20px 30px
+	h3
+		font-size: 23px
+	.post-date 
+    color: #969696
+    font-family: helvetica-light,Arial,sans-serif
+    font-size: 12px
+    line-height: 1.25
+    margin-bottom: 10px
+
+.single-post-img
+	img
+		display: block
+		max-width: 100%
+		margin: 0 auto
 
 
 
